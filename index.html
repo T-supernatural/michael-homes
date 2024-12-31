@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- website-title -->
+    <title>HOMES.com</title>
+
+    <!-- internal-styling -->
+     <style>
+
+        /* general-styling */
+*{
+    margin: 0%;
+    padding: 0%;
+    user-select: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(244, 244, 244);
+}
+
+
+/* navigation-bar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .5px solid rgba(180, 94, 33, 0.219);
+    padding: 2px 35px 2px 45px;
+    position: fixed;
+    background-color: rgb(244, 244, 244);
+    width: 100%;
+}
+nav .nav-logo{
+    color: rgb(180, 94, 33);
+    font-family: "Kalam", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.7rem;
+}
+nav .nav-logo span{
+    font-size: .7rem;
+}
+nav .nav-contents ul {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav .nav-contents ul a{
+    color: rgb(180, 94, 33);
+}
+nav .nav-contents ul a:hover{
+    color: rgb(0, 0, 0);
+}
+nav .nav-contents ul select{
+    border: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    background-color: rgb(244, 244, 244);
+    color: rgb(180, 94, 33);
+}
+nav .nav-contents ul select:hover{
+    color: black;
+}
+nav .nav-cta ul{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+nav .nav-cta ul p a:hover{
+    border-bottom: 2px solid rgb(180, 94, 33);
+}
+nav .nav-cta ul button{
+    text-transform: uppercase;
+    padding: 3px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(180, 94, 33);
+}
+nav .nav-cta ul button:hover{
+    background-color: rgb(134, 75, 33);
+}
+nav .nav-cta ul button select{
+    background-color: rgb(180, 94, 33);
+    text-transform: uppercase;
+    color: white;
+    padding: 2px;
+    border: none;
+}
+nav .nav-cta ul button select:hover{
+    background-color: rgb(134, 75, 33);
+}
+
+
+/* landing-page */
+section .landing-page{
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(to left, rgba(145, 125, 85, 0.062), rgba(39, 26, 2, 0.493)),  url(images/house.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+    padding-left: 50px;
+}
+section .landing-page .landing-page-hr{
+    width: 450px;
+    height: 10px;
+    background-color: white;
+}
+section .landing-page .landing-page-texts h1{
+    color: white;
+    font-size: 5.5rem;
+}
+section .landing-page .landing-page-buttons button.one{
+    color: rgb(180, 94, 33);
+    background-color: white;
+    border: none;
+    text-transform: uppercase;
+    padding: 11px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+section .landing-page .landing-page-buttons button.one:hover{
+    background-color: rgb(206, 206, 206);
+    color: rgb(216, 104, 23);
+}
+section .landing-page .landing-page-buttons button.two{
+    background-color: rgb(180, 94, 33);
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    padding: 11px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+section .landing-page .landing-page-buttons button.two:hover{
+    background-color: rgb(134, 75, 33);
+}
+
+/* carousel */
+section .carousel{
+    margin: 2% auto;
+    position: relative;
+    width: 100%; 
+    height: 300px; 
+    overflow: hidden;
+    background-color: rgb(228, 228, 228);
+    font-family: Arial, Helvetica, sans-serif;
+}
+section .carousel .showcase{
+    padding:  0px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+    animation: slide 21s infinite;
+}
+@keyframes slide {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+section .carousel .showcase:nth-child(1) {
+    animation-delay: 0s;
+} 
+section .carousel .showcase:nth-child(2) {
+    animation-delay: 7s;
+} 
+section .carousel .showcase:nth-child(3) {
+    animation-delay: 14s;
+}
+section .carousel .showcase h1 {
+    font-size: xx-large;
+    color: rgb(145, 77, 29);
+}
+section .carousel .showcase h1 span{
+    font-size: 3rem;
+    font-weight: bolder;
+}
+section .carousel .showcase h1 span a{
+    color: rgb(145, 77, 29);
+}
+
+/* featured-listings */
+section .featured-listings .featured-listings-headings{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    color: rgb(145, 77, 29);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 75px;
+}
+section .featured-listings .featured-listings-headings p:hover{
+    color: rgb(0, 0, 0);
+}
+section .featured-listings .featured-listings-list{
+    width: 90%;
+    height: 340px;
+    margin: 1% auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section .featured-listings .featured-listings-list .featured-listings-list-one{
+    width: 32.2%;
+    height: 100%;
+    border-radius: 9px;
+    background-color: rgba(240, 240, 240, 0.377);
+    box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.25);
+}
+section .featured-listings .featured-listings-list .featured-listings-list-one .featured-listings-list-one-image-one{
+    width: 100%;
+    height: 65%;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    background-image: url(images/house-five.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .featured-listings .featured-listings-list .featured-listings-list-one .featured-listings-list-one-image-two{
+    width: 100%;
+    height: 65%;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    background-image: url(images/house-six.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .featured-listings .featured-listings-list .featured-listings-list-one .featured-listings-list-one-image-three{
+    width: 100%;
+    height: 65%;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    background-image: url(images/house-two.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .featured-listings .featured-listings-list .featured-listings-list-one .featured-listings-list-one-text{
+    width: 100%;
+    height: 35%;
+    padding-left: 10px;
+    align-content: center;
+}
+section .featured-listings div.paragraph{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+/* featured-projects */
+section .featured-projects-heading{
+    color: rgb(145, 77, 29);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 70px;
+}
+section .featured-projects-image{
+    width: 90%;
+    height: 375px;
+    margin: 2% auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section .featured-projects-image .image-left{
+    width: 49%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgba(240, 240, 240, 0.377);
+    box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.25);
+}
+section .featured-projects-image .image-left .image-left-image{
+    width: 100%;
+    height: 65%;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    background-image: url(images/reserville.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .featured-projects-image .image-left .image-left-text{
+    padding-top: 7px;
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section .featured-projects-image .image-right{
+    width: 49%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgba(240, 240, 240, 0.377);
+    box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.25);
+}
+section .featured-projects-image .image-right .image-right-image{
+    width: 100%;
+    height: 65%;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    background-image: url(images/venice.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .featured-projects-image .image-right .image-right-text{
+    padding-top: 7px;
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* partnership */
+section .partnership{
+    margin: 5% auto;
+}
+section .partnership-image{
+    margin: 3% auto;
+    width: 90%;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* choose-us */
+section .choose-us{
+    margin: 3% auto;
+    width: 95%;
+    height: 650px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+section .choose-us .left{
+    width: 35%;
+    height: 100%;
+    align-content: center;
+    padding-left: 20px;
+}
+section .choose-us .right{
+    width: 62%;
+    height: 100%;
+    /* background-color: rgb(255, 0, 0); */
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 10px;
+    padding: 20px;
+}
+section .choose-us .right .right-circle{
+    width: 85%;
+    height: 90%;
+    border-radius: 5%;
+    background-color: rgb(228, 228, 228);
+    text-align: center;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 20px;
+}
+
+/* neighbourhood-guide */
+section .neighbourhood-guide{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 7% auto;
+}
+section .neighbourhood-guide .headings{
+    color: rgb(151, 80, 29);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 75px;
+}
+section .neighbourhood-guide .headings p a{
+    color: rgb(151, 80, 29);
+}
+section .neighbourhood-guide .headings p a:hover{
+    color: black;
+}
+section .neighbourhood-guide .neighbourhood-guide-image{
+    width: 90%;
+    height: 450px;
+    margin: 2% auto;
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-between;
+}
+section .neighbourhood-guide .neighbourhood-guide-image-one{
+    width: 23%;
+    height: 100%;
+    align-content: end;
+    color: white;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    background: linear-gradient(to left, rgba(145, 125, 85, 0.062), rgba(32, 31, 29, 0.562)),  url(images/lagos.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+}
+section .neighbourhood-guide .neighbourhood-guide-image-one:hover{
+    width: 22.5%;
+    height: 99.5%;
+}
+section .neighbourhood-guide .neighbourhood-guide-image-two{
+    width: 50%;
+    border-radius: 30px;
+    height: 100%;
+    /* background-color: rgb(173, 31, 31); */
+}
+section .neighbourhood-guide .neighbourhood-guide-image-two-up{
+    width: 100%;
+    border-radius: 25px;
+    height: 50%;
+    align-content: end;
+    color: white;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    background: linear-gradient(to left, rgba(145, 125, 85, 0.062), rgba(32, 31, 29, 0.562)),  url(images/abuja.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .neighbourhood-guide .neighbourhood-guide-image-two-up:hover{
+    width: 99.5%;
+    height: 49.5%;
+}
+section .neighbourhood-guide .neighbourhood-guide-image-two-down{
+    width: 100%;
+    border-radius: 25px;
+    height: 46.5%;
+    /* background-color: rgb(19, 1, 1); */
+    display: flex;
+    justify-content: space-between;
+}
+section .neighbourhood-guide .neighbourhood-guide-image-two-down .down-one{
+    width: 48%;
+    border-radius: 25px;
+    height: 100%;
+    align-content: end;
+    color: white;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    background: linear-gradient(to left, rgba(145, 125, 85, 0.062), rgba(32, 31, 29, 0.562)),  url(images/port-harcourt.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .neighbourhood-guide .neighbourhood-guide-image-two-down .down-one:hover{
+    width: 47.5%;
+    height: 99.5%;
+}
+section .neighbourhood-guide .neighbourhood-guide-image-two-down .down-two{
+    width: 48%;
+    border-radius: 25px;
+    height: 100%;
+    align-content: end;
+    color: white;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    background: linear-gradient(to left, rgba(59, 51, 35, 0.37), rgba(32, 31, 29, 0.055)),  url(images/kano.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .neighbourhood-guide .neighbourhood-guide-image-two-down .down-two:hover{
+    width: 47.5%;
+    height: 99.5%;
+}
+section .neighbourhood-guide .neighbourhood-guide-image-three{
+    width: 23%;
+    border-radius: 30px;
+    height: 100%;
+    align-content: end;
+    color: white;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    background: linear-gradient(to left, rgba(54, 48, 35, 0.575), rgba(32, 31, 29, 0.158)),  url(images/ibadan.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .neighbourhood-guide .neighbourhood-guide-image-three:hover{
+    width: 22.5%;
+    height: 99.5%;
+}
+
+/* get-started */
+section .start{
+    margin: 5% auto;
+    width: 95%;
+    height: 250px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left, rgb(231, 231, 231), rgb(219, 241, 252));
+}
+section .start .start-right{
+    width: 70%; 
+    height: 100%;
+    /* background-color: rgb(158, 118, 118); */
+    align-content: center;
+}
+section .start .start-right h3{
+    margin-bottom: 10px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    color: rgb(177, 89, 27);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+section .start .start-right .start-right-search{
+    width: 100%;
+    height: 170px;
+    padding: 10px 15px;
+    background-color: rgb(230, 230, 230);
+    box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section .start .start-right .start-right-search .srs-one ul{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 1.4rem;
+    color: rgb(185, 97, 34);
+    text-transform: uppercase;
+    /* font-weight: bold; */
+}
+section .start .start-right .start-right-search .srs-one ul li:hover{
+    color: black;
+}
+section .start .start-right .start-right-search .srs-hr{
+    width: 100%;
+    height: 1px;
+    margin: 10px 0px;
+    background-color: rgb(185, 97, 34);
+}
+section .start .start-right .start-right-search .srs-two form{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+section .start .start-right .start-right-search .srs-two input{
+    padding: 10px 5px;
+    border: none;
+    background-color: rgb(247, 247, 247);
+}
+section .start .start-right .start-right-search .srs-two .srs-two-one{
+    align-content: center;
+    justify-items: center;
+    padding-left: 3px;
+    padding-top: 3px;
+}
+section .start .start-right .start-right-search .srs-two input[placeholder]{
+    font-size: 1.4rem;
+}
+section .start .start-right .start-right-search .srs-two .srs-two-two button{
+    padding: 6px 15px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(185, 97, 34);
+    color: white;
+    font-size: 1.2rem;
+}
+section .start .start-right .start-right-search .srs-two .srs-two-two button:hover{
+    background-color: rgb(134, 75, 33);
+}
+section .start .start-right .start-right-search .srs-three{
+    display: flex;
+    gap: 30px;
+    margin-top: 12px;
+    justify-content: center;
+    color: rgba(85, 38, 6, 0.877);
+}
+section .start .start-right .start-right-search .srs-three select{
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    color: rgba(85, 38, 6, 0.877);
+}
+section .start .start-right .start-right-search .srs-three select:hover{
+    color: rgba(0, 0, 0, 0.877);
+}
+
+
+/* footer */
+div.five{
+    width: 100%;
+    height: 690px;
+    background-color: rgb(180, 94, 33);
+    padding-left: 60px;
+    padding-right: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+div.five-up{
+    display: flex;
+    justify-content: space-between;
+}
+div.five div.text{
+    padding-top: 30px;
+    color: white;
+}
+div.five div.text h1{
+    font-size: 1.5rem;
+}
+div.five-down{
+    display: flex;
+    justify-content: space-between;
+}
+div.five-down .text ul li a{
+    color: white;
+}
+div.five-down a img:hover{
+    border: 1px solid white;
+}
+div.five-end{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div.five-end p.chevron a{
+    align-items: center;
+}
+div.five-end p.chevron a:hover{
+    border-bottom: 1px solid white;
+    padding-bottom: 3px;
+}
+div.five-end div.icons{
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+div.five-end div.icons div.social-media{
+    width: 30px;
+    height: 100%;
+    /* background-color: aqua; */
+    font-size: 1.8rem;
+    text-align: center;
+}
+div.five-end div.icons div.social-media img{
+    height: 100%;
+    width: 100%;
+}
+div.five-end div.icons div.social-media:hover{
+    border: 1px solid white;
+}
+div.five-end p a{
+    color: white;
+}
+
+     </style>
+
+     <!-- google-fonts-link -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- navigation-bar -->
+     <nav>
+        <div class="nav-logo">
+            <p>HOMES.<span>COM</span></p>
+        </div>
+        <div class="nav-contents">
+            <ul>
+                <li title="Click to Buy/Rent a property of your choice"><a href="#">buy/rent</a></li>
+                <li title="Click to post your property for sale"><a href="#">sell</a></li>
+                <li title="Contact one of our estate agents to assist your find"><a href="#">estate agents</a></li>
+                <li title="Can't find what you want, click to request a property"><a href="#">request property</a></li>
+                <li>
+                    <a href="#"><select name="" id="">
+                        <option value="" title="Read our interesting stories">blog</option>
+                        <option value="" title="Check out various advertisements">ads</option>
+                    </select></a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-cta">
+            <ul>
+                <p title="Check out our amazing gallery of exclusive properties"><a href="#"><img src="gallery.png" alt="" width="25"></a></p>
+                <p title="Contact us"><a href="#"><img src="phone-call.png" alt="" width="22"></a></p>
+                <a href="#"><button>
+                    <select name="" id="">
+                        <option value="">account</option>
+                        <option value="">sign up</option>
+                        <option value="">log in</option>
+                    </select>
+                </button></a>
+            </ul>
+        </div>
+     </nav><br>
+
+     <!-- sections -->
+     <section>
+
+         <!-- landing-page -->
+         <div class="landing-page">
+            <div class="landing-page-hr"></div>
+            <div class="landing-page-texts">
+                <h1>Buy.Sell.<br>
+                    Relax.Enjoy.
+                </h1>
+            </div>
+            <div class="landing-page-buttons">
+                <a href="#"><button class="one">GET STARTED</button></a>&nbsp;
+                <a href="#"><button class="two">LEARN MORE</button></a>
+            </div>
+         </div>   
+
+         <!-- carousel -->
+          <div class="carousel">
+            <div class="showcase">
+				<h1>
+                    <span>Sign in!</span><br>
+                    To Get Exclusive Offers <br>
+                    On Container Houses.
+                </h1>
+				<img src="hommy.png" alt="" width="480">
+			</div>
+            <div class="showcase">
+				<h1>
+                    <span>Do You Know?</span><br>
+                    Caravan Houses Are <br>
+                    Eco-Friendly.
+                </h1>
+				<img src="homie.png" alt="" width="480">
+			</div>
+            <div class="showcase">
+				<h1>
+                    <span>Love TreeHouses?</span><br>
+                    Contact Us To Help <br>
+                    You Arrange One.
+                </h1>
+				<img src="homia.png" alt="" width="370">
+			</div>
+          </div><br><br><br><br><br>
+
+          <!-- featured-listings -->
+           <div class="featured-listings">
+            <div class="featured-listings-headings">
+                <h1 style="text-transform: uppercase; font-size: 1.8rem;">Featured Listings</h1>
+                <p>see all</p>
+            </div>
+            <div class="featured-listings-list">
+                <div class="featured-listings-list-one">
+                    <div class="featured-listings-list-one-image-one"></div>
+                    <div class="featured-listings-list-one-text">
+                        <div class="paragraph">
+                            <p style="font-size: .9rem; color: rgb(145, 77, 29);">Lovely and newly built 5 bedroom ap... </p>
+                            <img src="images/heart.png" alt="" width="25">
+                        </div>
+                        <h1 style="color: rgba(145, 77, 29, 0.938);"><span style="text-decoration: line-through;">N</span>25,000,000</h1>
+                        <p style="color: rgb(46, 46, 46);">Apple Tollgate Estate, <br>
+                            Idunni Ibadan State. <br>
+                            5 Beds &nbsp; 5 Baths
+                        </p>
+                    </div>
+                </div>
+                <div class="featured-listings-list-one">
+                    <div class="featured-listings-list-one-image-two"></div>
+                    <div class="featured-listings-list-one-text">
+                        <div class="paragraph">
+                            <p style="font-size: .9rem; color: rgb(145, 77, 29);">Five bedroom detached house... </p>
+                            <img src="images/heart.png" alt="" width="25">
+                        </div>
+                        <h1 style="color: rgba(145, 77, 29, 0.938);"><span style="text-decoration: line-through;">N</span>23,300,000</h1>
+                        <p style="color: rgb(46, 46, 46);">Diamond Town Estate, <br>
+                            Epe Lagos State. <br>
+                            5 Beds &nbsp; 5 Baths
+                        </p>
+                    </div>
+                </div>
+                <div class="featured-listings-list-one">
+                    <div class="featured-listings-list-one-image-three"></div>
+                    <div class="featured-listings-list-one-text">
+                        <div class="paragraph">
+                            <p style="font-size: .9rem; color: rgb(145, 77, 29);">Four bedroom semi-detached... </p>
+                            <img src="images/heart.png" alt="" width="25">
+                        </div>
+                        <h1 style="color: rgba(145, 77, 29, 0.938);"><span style="text-decoration: line-through;">N</span>18,070,000</h1>
+                        <p style="color: rgb(46, 46, 46);">Apo phase 2, <br>
+                            Apo Abuja. <br>
+                            5 Beds &nbsp; 5 Baths
+                        </p>
+                    </div>
+                </div>
+            </div>
+           </div><br><br><br><br><br>
+
+           <!-- featured-projects -->
+            <div class="featured-projects">
+                <div class="featured-projects-heading">
+                    <h1 style="font-size: 1.8rem;">FEATURED PROJECTS</h1>
+                </div>
+                <div class="featured-projects-image">
+                    <div class="image-left">
+                        <div class="image-left-image"></div>
+                        <div class="image-left-text">
+                            <h1 style="color: rgba(145, 77, 29, 0.938); margin-bottom: 5px;">Luxeville Estate</h1>
+                            <p style="color: rgba(80, 80, 80, 0.863); margin-bottom: 15px;">Gwagwalada, Abuja</p>
+                            <p style="color: rgba(85, 38, 6, 0.877);">Luxevile Estate ▪ 2 toilets ▪ 3 baths <br> ▪ 4 bedrooms</p>
+                        </div>
+                    </div>
+                    <div class="image-right">
+                        <div class="image-right-image"></div>
+                        <div class="image-right-text">
+                            <h1 style="color: rgba(145, 77, 29, 0.938); margin-bottom: 5px;">The Venice</h1>
+                            <p style="color: rgba(80, 80, 80, 0.863); margin-bottom: 15px;">Sangotedo, Lagos</p>
+                            <p style="color: rgba(85, 38, 6, 0.877);">Homeland Development Co ▪ 2 toilets ▪ 3 baths <br> ▪ 4 bedrooms</p>
+                        </div>
+                    </div>
+                </div>
+            </div><br><br><br>
+
+           <!-- partnership -->
+            <div class="partnership">
+                <center><h1 style="font-family: Arial, Helvetica, sans-serif; color: rgb(145, 77, 29); font-size: 1.8rem;">REAL ESTATE PARTNERS</h1></center>
+                <div class="partnership-image">
+                    <img src="images/agent one.png" alt="">
+                    <img src="images/agent two.png" alt="">
+                    <img src="images/agent three.png" alt="">
+                    <img src="images/agent four.png" alt="">
+                </div>
+            </div><br><br><br><br>
+
+           <!-- choose-us -->
+             <div class="choose-us">
+                <div class="left">
+                    <h1 style="font-size: 4rem; color: rgb(180, 94, 33);">WHY <br>CHOOSE <br>HOMES.com?</h1><br>
+                    <p style="font-family: Arial, Helvetica, sans-serif; font-size: 1.2rem; color: rgb(85, 38, 6);">
+                        <strong>HOMES.com</strong>  is the clear leading property website with lots of users, advertising members
+				        and properties.  Our advertisers are property professionals such as estate agents,
+				        letting (rental) agents, new homes developers and Nigeria private property owners,
+				        who offer properties within Nigeria for property hunters.
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="right-circle">
+                        <img src="images/search.png" alt="" width="70">
+                        <h2 style="color: rgb(180, 94, 33);">SEARCH FOR PROPERTIES WITH <br>EASE</h2>
+                        <P>Find your needle in a haystack. 
+                        Narrow down to the ideal property, 
+                        home or house for you!
+                        </P>
+                    </div>
+                    <div class="right-circle">
+                        <img src="images/bell.png" alt="" width="70">
+                        <h2 style="color: rgb(180, 94, 33);">BE THE FIRST <br>TO KNOW.</h2>
+                        <P>Intelligent, non-intrusive on time
+                        notification when your most ideal home or house comes to the market.
+                        </P>
+                    </div>
+                    <div class="right-circle">
+                        <img src="images/decision.png" alt="" width="90">
+                        <h2 style="color: rgb(180, 94, 33);">MAKE INFORMED DECISION</h2>
+                        <P>Buying or renting a property is a critical 
+                        decision. Be armed with enough and relevant information.
+                        </P>
+                    </div>
+                    <div class="right-circle">
+                        <img src="images/broker.png" alt="" width="90">
+                        <h2 style="color: rgb(180, 94, 33);">FIND GENIUNE REAL ESTATE PROS</h2>
+                        <P>Curated list of reputable real 
+                        estate agent you can consult for professional services.
+                        </P>
+                    </div>
+                </div>
+             </div>
+
+           <!-- neighbourhood-guide -->
+           <div class="neighbourhood-guide">
+			<div class="headings">
+                <h1 style="font-size: 1.8rem;">NEIGHBOURHOOD GUIDE</h1>
+                <p><a href="#">see map</a></p>
+            </div>
+			<div class="neighbourhood-guide-image">
+				<div class="neighbourhood-guide-image-one">
+					<h2 style="padding-bottom: 10px;">Lagos</h2>
+					<p>6&deg; 27'  4.104" N</p>
+					<p>3&deg; 23'  18.24" E</p>
+				</div>
+				<div class="neighbourhood-guide-image-two">
+					<div class="neighbourhood-guide-image-two-up">
+					<h2 style="padding-bottom: 10px;">Abuja</h2>
+					<p>9&deg; 4'  35.324" N</p>
+					<p>7&deg; 23'  54.866" E</p>
+					</div><br>
+					<div class="neighbourhood-guide-image-two-down">
+						<div class="down-one">
+							<h2 style="padding-bottom: 10px;">Port-Harcourt</h2>
+					        <p>4&deg; 46'  17.36" N</p>
+					        <p>7&deg; 0'  51.66" E</p>
+						</div>
+						<div class="down-two">
+							<h2 style="padding-bottom: 10px;">Kano</h2>
+                            <p>6&deg; 11'  9.18" N</p>
+					        <p>6&deg; 43'  46.95" E</p>
+						</div>
+					</div>
+				</div>
+				<div class="neighbourhood-guide-image-three">
+					<h2 style="padding-bottom: 10px;">Ibadan</h2>
+					<p>7&deg; 20'  55.392" N</p>
+					<p>3&deg; 52'  45.44" E</p>
+				</div>
+			</div>
+		</div>
+
+        <!-- get-started -->
+         <div class="start">
+            <img src="images/start.png" alt="" width="350">
+            <div class="start-right">
+                <h3>begin your search with one click.</h3>
+                <div class="start-right-search">
+                   <div class="srs-one">
+                    <ul>
+                        <li>Buy</li>
+                        <li>Rent</li>
+                        <li>Short Let</li>
+                        <li>Land</li>
+                    </ul>
+                   </div>
+                   <div class="srs-hr"></div>
+                   <div class="srs-two">
+                    <form action="">
+                    <div class="srs-two-one"><img src="search (1).png" alt="" width="25"></div>
+                    <input type="text" placeholder="search houses" size="51" required>
+                    <div class="srs-two-two"><a href="#"><button>Search</button></a></div>
+                   </form>
+                   </div>
+                   <div class="srs-three">
+                    <div class="srs-three-type">
+                        <select name="" id="">
+                            <option value="">Type</option>
+                        </select>
+                    </div>
+                    <p>|</p>
+                    <div class="srs-three-bed">
+                        <select name="" id="">
+                            <option value="">Bed</option>
+                        </select>
+                    </div>
+                    <p>|</p>
+                    <div class="srs-three-min">
+                        <select name="" id="">
+                            <option value="">Min. price</option>
+                        </select>
+                    </div>
+                    <p>|</p>
+                    <div class="srs-three-max">
+                        <select name="" id="">
+                            <option value="">Max. price</option>
+                        </select>
+                    </div>
+                   </div>
+                </div>
+            </div>
+         </div>
+     </section>
+
+     <!-- footer -->
+     <div class="five">
+        <div class="five-up">
+          <div class="text">
+              <h1>Popular States </h1><br>
+              <ul>
+                  <li>Properties in Lagos</li><br>
+                  <li>Properties in Abuja</li><br>
+                  <li>Properties in Rivers</li><br>
+                  <li>Properties in Kano</li><br>
+                  <li>Properties in Ogun</li><br>
+                  <li>Properties in Oyo</li><br>
+                  <li>Properties in Enugu</li><br>
+              </ul>
+          </div>
+          <div class="text">
+              <h1>Popular Cities </h1><br>
+              <ul>
+                  <li>Properties in Ikeja</li><br>
+                  <li>Properties in Lekki</li><br>
+                  <li>Properties in Ikoyi</li><br>
+                  <li>Properties in Ibeju-Lekki</li><br>
+                  <li>Properties in Ibadan</li><br>
+                  <li>Properties in Port-Harcourt</li><br>
+                  <li>Properties in Kano</li><br>
+              </ul>
+          </div>
+          <div class="text">
+              <h1>Popular Shortlet Cities</h1><br>
+              <ul>
+                  <li>Shortlet in Ikeja</li><br>
+                  <li>Shortlet in Lekki</li><br>
+                  <li>Shortlet in Ikoyi</li><br>
+                  <li>Shortlet in Ibadan</li><br>
+                  <li>Shortlet in Ajah</li><br>
+                  <li>Shortlet in Abuja</li><br>
+                  <li>Shortlet in Rivers</li><br>
+              </ul>
+          </div>
+          <div class="text">
+              <h1>Popular Land for Sale </h1><br>
+              <ul>
+                  <li>Land in Lagos</li><br>
+                  <li>Land in Abuja</li><br>
+                  <li>Land in Oyo</li><br>
+                  <li>Land in Ogun</li><br>
+                  <li>Land in Enugu</li><br>
+                  <li>Land in Rivers</li><br>
+                  <li>Land in Kano</li><br>
+              </ul>
+          </div>
+        </div>
+        <br>
+        <hr>
+
+        <!-- footer -->
+        <div class="five-down">
+          <div class="text">
+              <h1>COMPANY</h1><br>
+              <ul>
+                  <li><a href="#">About Us</a></li><br>
+                  <li><a href="">Contact Us</a></li><br>
+                  <li><a href="">HOMES.com Blog</a></li><br>
+                  <li><a href="">Marketing Services</a></li><br>
+                  <li><a href="">Help/Guide</a></li><br>
+              </ul>
+          </div>
+          <div class="text">
+              <h1>BUSINESS PRODUCTS</h1><br>
+              <ul>
+                  <li><a href="#">Advertise</a></li><br>
+                  <li><a href="">Subscription Plans</a></li><br>
+                  <li><a href="">Agent Website</a></li><br>
+                  <li><a href="">Developer Plus</a></li><br>
+                  <li><a href="">HOMES.com Ads</a></li><br>
+              </ul>
+          </div>
+          <div class="text">
+              <h1>PROPERTY TOOLS</h1><br>
+              <ul>
+                  <li><a href="#">Local Info</a></li><br>
+                  <li><a href="">Post a Listing</a></li><br>
+                  <li><a href="">Post a Request</a></li><br>
+                  <li><a href="">Moving Quote</a></li><br>
+              </ul>
+          </div>
+          <div class="text">
+              <h1>WEBSITE</h1><br>
+              <ul>
+                  <li><a href="#">Terms of Use</a></li><br>
+                  <li><a href="">Privacy Policy</a></li><br>
+                  <h4>Download Our Mobile App</h4><br>
+                  <a href="#"><img src="images/playstore.jpg" alt="" width="135px"></a><br>
+                  <a href="#"><img src="images/applestore.jpg" alt="" width="135px"></a>
+              </ul>
+          </div>
+        </div>
+        <br>
+        <hr style="margin-bottom: 10px;">
+        <div class="five-end">
+          <p style="color: white;"><i class='bx bx-copyright' style='color:#ffffff' ></i> 2024 HOMES.com (RC 1234567)</p>
+          <P class="chevron"><a href="home.html"><img src="chevron-up.png" alt="" width="12"> Back to top <img src="chevron-up.png" alt="" width="12"></a></P>
+          <div class="icons">
+              <div class="social-media"><a href="#"><img src="images/instagram (1).png" alt=""></a></div>
+              <div class="social-media"><a href="#"><img src="images/twitter.png" alt=""></a></div>
+              <div class="social-media"><a href="#"><img src="images/whatsapp.png" alt=""></a></div>
+              <div class="social-media"><a href="#"><img src="images/facebook (2).png" alt=""></a></div>
+              <div class="social-media"><a href="#"><img src="images/tiktok.png" alt=""></a></div>
+              <div class="social-media"><a href="#"><img src="images/linkedin.png" alt=""></a></div>
+          </div>
+        </div>
+        
+      </div>
+
+     
+</body>
+</html>
